@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conciencia Digital Segura</title>
+  <style>
+    /* ----------- Estilos globales ----------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Arial", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ----------- Navbar ----------- */
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(75, 0, 130, 0.9); /* Violeta */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff9800; /* Naranja */
+    }
+
+    /* ----------- Menú hamburguesa ----------- */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    /* Animación para convertir hamburguesa en X */
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links.active {
+      display: block;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(75, 0, 130, 0.95);
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+
+    .nav-links.active a {
+      display: block;
+      margin: 10px 0;
+    }
+
+    /* ----------- Secciones ----------- */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    #inicio {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1605902711622-cfb43c4437d5");
+    }
+
+    #quienes {
+      background: linear-gradient(rgba(138,43,226,0.7), rgba(138,43,226,0.7)), url("https://images.unsplash.com/photo-1522199710521-72d69614c702");
+    }
+
+    #violencia {
+      background: linear-gradient(rgba(255,152,0,0.7), rgba(255,152,0,0.7)), url("https://images.unsplash.com/photo-1509099836639-18ba1795216d");
+    }
+
+    #mapa {
+      background: linear-gradient(rgba(34,139,34,0.7), rgba(34,139,34,0.7)), url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0");
+    }
+
+    footer {
+      background: #6a0dad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    section h1, section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    /* ----------- Botones ----------- */
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e68900;
+      transform: scale(1.1);
+    }
+
+    /* ----------- Animaciones ----------- */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----------- Responsividad ----------- */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+        <a href="#">
+          <img src="./img/logo_web.png" alt="logo" width="50px" height="50px">
+        </a>
+    </div>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#quienes">Quiénes Somos</a>
+      <a href="#violencia">Violencia Digital</a>
+      <a href="#mapa">Ubicación</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Secciones -->
+  <section id="inicio">
+    <!-- <h1>Conciencia Digital Segura</h1> -->
+    <!-- <p>Un espacio para aprender, reflexionar y actuar frente a la violencia digital.</p> -->
+    <!-- <a href="#quienes"><button class="btn">Conócenos</button></a> -->
+     <img src="./img/principal.png" alt="">
+  </section>
+
+  <section id="quienes">
+    <h2>Quiénes Somos</h2>
+    <p>Somos un grupo comprometido en San Salvador de Jujuy que busca generar conciencia sobre la importancia de la seguridad digital y el respeto en línea.</p>
+  </section>
+
+  <section id="violencia">
+    <h2>Violencia Digital</h2>
+    <p>La violencia digital afecta a miles de personas. A través de talleres, charlas y campañas buscamos prevenir, detectar y actuar frente a estas problemáticas.</p>
+  </section>
+
+  <section id="mapa">
+    <h2>Ubicación</h2>
+    <p>Nos encontramos en San Salvador de Jujuy. ¡Visítanos!</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.758420710947!2d-65.30040968503065!3d-24.185786084373572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94224333c17f24ef%3A0x63597d6e5c67c5b!2sSan%20Salvador%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1692839826537!5m2!1ses!2sar" 
+      width="80%" height="300" style="border:0; border-radius:15px; margin-top:20px;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer>
+     <p>📧 contacto@entornodigitalseguro.org | 🌐 Síguenos en <a href="#">Facebook</a> - <a href="#">Instagram</a> - <a href="#">X</a></p>
+    <p>© 2025 Entorno Digital Seguro - San Salvador de Jujuy</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector(".nav-links");
+      const hamburger = document.querySelector(".hamburger");
+      
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("active");
+    }
+  </script>
+  
+</body>
+</html>
