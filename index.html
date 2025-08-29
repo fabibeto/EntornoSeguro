@@ -296,6 +296,166 @@
         font-size: 1rem;
     }
 }
+/* ----------- Sección de Noticias ----------- */
+#noticias {
+    padding: 60px 20px;
+    background-color: #f8f9fa; /* Color de fondo claro */
+    text-align: center;
+}
+
+#noticias h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.noticias-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
+    justify-content: center;
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+.noticia-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que la imagen no se salga de la tarjeta */
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.noticia-card:hover {
+    transform: translateY(-5px);
+}
+
+.noticia-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #6a0dad; /* Color de acento */
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.noticia-link {
+    display: inline-block;
+    color: #ff9800; /* Naranja, color de acento */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.noticia-link:hover {
+    color: #e68900;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .noticias-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ----------- Sección de Contacto ----------- */
+#contacto {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: #ffffff; /* Fondo blanco para el contenedor */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+    width: 100%;
+    max-width: 600px; /* Ancho máximo en pantallas grandes */
+}
+
+.form-container h2 {
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.form-container p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #e68900;
+}
+
+/* ----------- Responsividad ----------- */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 2rem;
+    }
+}
   </style>
 </head>
 <body>
@@ -312,7 +472,10 @@
       <a href="#quienes">Quiénes Somos</a>
       <a href="#violencia">Proyecto</a>
       <a href="#juego">Juego</a>
-      <a href="#mapa">Ubicación</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#contacto">Contacto</a>
+      <!-- <a href="#mapa">Ubicación</a> -->
+
     </nav>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
@@ -380,6 +543,38 @@
     </div>
   </section>
 
+  <section id="noticias">
+    <h2>Últimas Noticias</h2>
+    <div class="noticias-container">
+        <div class="noticia-card">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e1c8d55c7?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&h=250&fit=crop" alt="Ciberseguridad en el trabajo" class="noticia-img">
+            <div class="card-content">
+                <h3>5 Consejos de Ciberseguridad para Empresas</h3>
+                <p>Descubre cómo proteger a tu equipo y la información de tu empresa de las amenazas digitales más comunes hoy en día.</p>
+                <a href="#" class="noticia-link">Leer más</a>
+            </div>
+        </div>
+
+        <div class="noticia-card">
+            <img src="https://images.unsplash.com/photo-1563986768605-da4d1ee2f61e?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&h=250&fit=crop" alt="Educación digital para jóvenes" class="noticia-img">
+            <div class="card-content">
+                <h3>El Rol de la Educación en la Prevención del Ciberbullying</h3>
+                <p>Exploramos la importancia de educar a los jóvenes para crear un entorno en línea más respetuoso y seguro para todos.</p>
+                <a href="#" class="noticia-link">Leer más</a>
+            </div>
+        </div>
+
+        <div class="noticia-card">
+            <img src="https://images.unsplash.com/photo-1593642531955-b040bf56784d?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&h=250&fit=crop" alt="Privacidad de datos en apps" class="noticia-img">
+            <div class="card-content">
+                <h3>Privacidad de Datos: ¿Qué Saben las Apps sobre Nosotros?</h3>
+                <p>Una guía para entender cómo las aplicaciones móviles recopilan tus datos y qué puedes hacer para proteger tu privacidad.</p>
+                <a href="#" class="noticia-link">Leer más</a>
+            </div>
+        </div>
+    </div>
+</section>
+
   <section id="mapa">
     <h2>Ubicación</h2>
     <p>Nos encontramos en San Salvador de Jujuy. ¡Visítanos!</p>
@@ -387,6 +582,31 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.758420710947!2d-65.30040968503065!3d-24.185786084373572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94224333c17f24ef%3A0x63597d6e5c67c5b!2sSan%20Salvador%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1692839826537!5m2!1ses!2sar" 
       width="80%" height="300" style="border:0; border-radius:15px; margin-top:20px;" allowfullscreen="" loading="lazy"></iframe>
   </section>
+  <section id="contacto">
+    <div class="form-container">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes preguntas o sugerencias? ¡Nos encantaría escucharte!</p>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+            <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu consulta" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Tu Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        </form>
+    </div>
+</section>
   
   <!-- FOOTER -->
   <footer>
