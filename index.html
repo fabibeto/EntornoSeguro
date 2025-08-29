@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conciencia Digital Segura</title>
+  <title>Entorno Seguro</title>
   <style>
     /* ----------- Estilos globales ----------- */
     * {
@@ -24,7 +24,7 @@
       position: fixed;
       width: 100%;
       background: rgba(75, 0, 130, 0.9); /* Violeta */
-      padding: 10px 20px;
+      padding: 8px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -127,9 +127,12 @@
     #violencia {
       background: linear-gradient(rgba(255,152,0,0.7), rgba(255,152,0,0.7)), url("https://images.unsplash.com/photo-1509099836639-18ba1795216d");
     }
-
+    /* #juego {
+      background: linear-gradient(#170a2f), url("./img/juego.png");
+    } */
+    
     #mapa {
-      background: linear-gradient(rgba(34,139,34,0.7), rgba(34,139,34,0.7)), url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0");
+      background: linear-gradient(rgba(34, 139, 34, 0.7), rgba(34,139,34,0.7)), url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0");
     }
 
     footer {
@@ -155,7 +158,7 @@
     .btn {
       margin-top: 20px;
       padding: 12px 25px;
-      background: #ff9800;
+      background: #6a0dad;
       color: white;
       border: none;
       border-radius: 30px;
@@ -164,7 +167,8 @@
     }
 
     .btn:hover {
-      background: #e68900;
+      /* background: #e68900; */
+      background: #228B22;
       transform: scale(1.1);
     }
 
@@ -202,13 +206,14 @@
   <header>
     <div class="logo">
         <a href="#">
-          <img src="./img/logo_web.png" alt="logo" width="50px" height="50px">
+          <img src="./img/logo.png" alt="logo" width="70px" height="70px">
         </a>
     </div>
     <nav class="nav-links">
       <a href="#inicio">Inicio</a>
       <a href="#quienes">Quiénes Somos</a>
-      <a href="#violencia">Violencia Digital</a>
+      <a href="#violencia">Proyecto</a>
+      <a href="#juego">Juego</a>
       <a href="#mapa">Ubicación</a>
     </nav>
     <div class="hamburger" onclick="toggleMenu()">
@@ -223,17 +228,45 @@
     <!-- <h1>Conciencia Digital Segura</h1> -->
     <!-- <p>Un espacio para aprender, reflexionar y actuar frente a la violencia digital.</p> -->
     <!-- <a href="#quienes"><button class="btn">Conócenos</button></a> -->
-     <img src="./img/principal.png" alt="">
+     <img src="./img/entornoSeguro.png" alt="Entorno Seguro">
   </section>
 
   <section id="quienes">
     <h2>Quiénes Somos</h2>
+    <!-- <img src="./img/foto_equipo.jpg" alt="foto_equipo" width="70px" height="50px" class="img-responsive"> -->
+    <img src="./img/foto_equipo.jpg" alt="foto_equipo">
+    <br>
+    <br>
     <p>Somos un grupo comprometido en San Salvador de Jujuy que busca generar conciencia sobre la importancia de la seguridad digital y el respeto en línea.</p>
+    <p>Entorno Seguro es un proyecto transmedia que combina un cortometraje XR en 360° que pone en escena 3 cortometrajes de violencia digital: el odio que
+       atraviesa las redes, el hostigamiento que persigue hasta lo cotidiano, y las imágenes falsas creadas con inteligencia artificial que buscan quebrar identidades.</p>
   </section>
 
   <section id="violencia">
-    <h2>Violencia Digital</h2>
-    <p>La violencia digital afecta a miles de personas. A través de talleres, charlas y campañas buscamos prevenir, detectar y actuar frente a estas problemáticas.</p>
+    <h2>Entorno Seguro</h2>
+    <!-- <p>La violencia digital afecta a miles de personas. A través de talleres, charlas y campañas buscamos prevenir, detectar y actuar frente a estas problemáticas.</p> -->
+     <p>ENTORNO SEGURO
+        Un recorrido inmersivo en 360° que expone tres situaciones de violencia digital: odio, hostigamiento y manipulación con IA.
+        A través de experiencias inmersivas, charlas y herramientas interactivas, buscamos educar, sensibilizar y acompañar a jóvenes y disidencias en la construcción de un espacio digital más justo, empático y seguro.
+        <br>
+        🔹 Reconocer la violencia digital.
+        <br>
+        🔹 Aprender a reaccionar y acompañar.
+        <br>
+        🔹 Construir redes de cuidado.
+        <br>
+
+        La empatía y la educación son nuestras herramientas para transformar el entorno.
+      </p>
+      <a href="https://poe.com/EntornoSeguro" target="_blank"><button class="btn">Chatea con nuestro asistente</button></a>
+      
+      <section id="juego">
+        <div class="contenedor-kahoot">
+          <iframe name="myiFrame" width="1600px" height="800px" src="https://kahoot.it/solo/?quizId=112f523c-317e-4dd4-b745-e959296cf30c&gameMode=nano"
+           scrolling="no" marginwidth="0" marginheight="0" style="border:0px none #ffffff;"></iframe>
+        </div>
+      </section>
+
   </section>
 
   <section id="mapa">
@@ -246,8 +279,13 @@
   
   <!-- FOOTER -->
   <footer>
-     <p>📧 contacto@entornodigitalseguro.org | 🌐 Síguenos en <a href="#">Facebook</a> - <a href="#">Instagram</a> - <a href="#">X</a></p>
-    <p>© 2025 Entorno Digital Seguro - San Salvador de Jujuy</p>
+     <p>📧 info.entorno.digital.seguro@gmail.com | 🌐 Seguinos en 
+      <a href="https://www.instagram.com/entorno.seguro/" target="_blank">
+        <!-- Instagram -->
+         <img src="./img/instagram.png" alt="icono instagram" width="25px" height="25px">
+      </a> 
+    </p>
+    <p>© 2025 Entorno Seguro - San Salvador de Jujuy</p>
   </footer>
 
   <script>
