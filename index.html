@@ -198,6 +198,14 @@
         flex-direction: column;
       }
     }
+  /* Media Query: Oculta la imagen cuando el ancho de la pantalla sea de 768px o menos */
+  @media (max-width: 768px) 
+  {
+    .ocultar-en-movil 
+    {
+      display: none;
+    }
+  }  
   </style>
 </head>
 <body>
@@ -234,7 +242,7 @@
   <section id="quienes">
     <h2>Quiénes Somos</h2>
     <!-- <img src="./img/foto_equipo.jpg" alt="foto_equipo" width="70px" height="50px" class="img-responsive"> -->
-    <img src="./img/foto_equipo.jpg" alt="foto_equipo">
+    <img src="./img/foto_equipo.jpg" alt="foto_equipo" class="ocultar-en-movil">
     <br>
     <br>
     <p>Somos un grupo comprometido en San Salvador de Jujuy que busca generar conciencia sobre la importancia de la seguridad digital y el respeto en línea.</p>
