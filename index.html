@@ -117,7 +117,7 @@
     }
 
     #inicio {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1605902711622-cfb43c4437d5");
+      background: linear-gradient(#0d0225), url("https://images.unsplash.com/photo-1605902711622-cfb43c4437d5");
     }
 
     #quienes {
@@ -206,6 +206,45 @@
       display: none;
     }
   }  
+  /* Estilos por defecto para pantallas grandes */
+.inicio-img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Muestra la imagen principal por defecto */
+}
+
+.inicio-frase {
+  display: none; /* Oculta la frase y el logo dentro de ella por defecto */
+  color: white; /* Color del texto para que contraste con el fondo */
+  font-size: 1.5rem; /* Tamaño de la fuente para la frase */
+  text-align: center;
+  padding: 20px;
+}
+
+.logo-frase {
+  display: inline-block; /* Muestra el logo dentro de la frase */
+  max-width: 80px; /* Tamaño máximo para el logo dentro de la frase */
+  height: auto;
+  vertical-align: middle; /* Alinea el logo verticalmente con el texto */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .inicio-img {
+    display: none; /* Oculta la imagen principal en pantallas pequeñas */
+  }
+
+  .inicio-frase {
+    display: block; /* Muestra la frase y el logo en pantallas pequeñas */
+  }
+
+  /* Si quieres ajustar el tamaño del logo en móviles específicamente */
+  .logo-frase {
+    max-width: 60px; /* Un poco más pequeño en móviles */
+    margin-right: 8px;
+  }
+}
   </style>
 </head>
 <body>
@@ -236,7 +275,11 @@
     <!-- <h1>Conciencia Digital Segura</h1> -->
     <!-- <p>Un espacio para aprender, reflexionar y actuar frente a la violencia digital.</p> -->
     <!-- <a href="#quienes"><button class="btn">Conócenos</button></a> -->
-     <img src="./img/entornoSeguro.png" alt="Entorno Seguro">
+     <img src="./img/entornoSeguro.png" alt="Entorno Seguro" class="inicio-img">
+     <p class="inicio-frase">
+      <img src="./img/logo.png" alt="logo" class="logo-frase">
+      "Más que un espacio, una comunidad donde la educación, el respeto y la empatía son nuestras 
+      herramientas para construir una internet más segura para todos."</p>
   </section>
 
   <section id="quienes">
