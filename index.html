@@ -245,6 +245,57 @@
     margin-right: 8px;
   }
 }
+/* ----------- Sección de Llamada a la Acción (CTA) ----------- */
+#cta {
+    background-color: #6a0dad; /* Un color de acento o el color de tu footer */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: #ff9800; /* Naranja, para que resalte */
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #e68900;
+}
+
+/* Responsividad para la sección CTA */
+@media (max-width: 768px) {
+    #cta {
+        padding: 60px 15px;
+    }
+    
+    #cta h2 {
+        font-size: 2rem;
+    }
+
+    #cta p {
+        font-size: 1rem;
+    }
+}
   </style>
 </head>
 <body>
@@ -288,7 +339,7 @@
     <img src="./img/foto_equipo.jpg" alt="foto_equipo" class="ocultar-en-movil">
     <br>
     <br>
-    <p>Somos un grupo comprometido en San Salvador de Jujuy que busca generar conciencia sobre la importancia de la seguridad digital y el respeto en línea.</p>
+    <p>Somos un grupo multidisciplinario de Jujeños que busca generar conciencia sobre la importancia de la seguridad digital y el respeto en línea.</p>
     <p>Entorno Seguro es un proyecto transmedia que combina un cortometraje XR en 360° que pone en escena 3 cortometrajes de violencia digital: el odio que
        atraviesa las redes, el hostigamiento que persigue hasta lo cotidiano, y las imágenes falsas creadas con inteligencia artificial que buscan quebrar identidades.</p>
   </section>
@@ -311,6 +362,7 @@
       </p>
       <a href="https://poe.com/EntornoSeguro" target="_blank"><button class="btn">Chatea con nuestro asistente</button></a>
       
+      
       <section id="juego">
         <div class="contenedor-kahoot">
           <iframe name="myiFrame" width="1600px" height="800px" src="https://kahoot.it/solo/?quizId=112f523c-317e-4dd4-b745-e959296cf30c&gameMode=nano"
@@ -318,6 +370,14 @@
         </div>
       </section>
 
+  </section>
+  
+  <section id="cta">
+    <div class="cta-contenido">
+        <h2>¿Listo para construir un entorno seguro?</h2>
+        <p>Da el primer paso para protegerte y unirte a la conversación. Nuestra comunidad te está esperando.</p>
+        <a href="https://forms.gle/vbN8BUtpBRzWvFmGA" target="_blank" class="btn-cta">Únete a la conversación</a>
+    </div>
   </section>
 
   <section id="mapa">
